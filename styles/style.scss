@@ -1,0 +1,70 @@
+$primaryColor:rgb(70, 70, 70);
+$hoverColor:rgb(84, 84, 84);
+$textColor:rgb(242, 242, 242);
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: $primaryColor;
+    color: $textColor;
+  }
+
+  .container {
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    background-color:$primaryColor;
+    border: 2px solid black;
+    
+        .topItems{
+            &:hover{
+                background-color:$hoverColor;
+            }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 1em;
+            margin-right: 1em;
+            img{
+                max-width: 150px;
+                min-width: 100px;
+                border-radius: 50%;
+            }      
+            h1{
+                color: $textColor;
+                font-size: xx-large;
+                font-family: sans-serif;
+            }
+
+        }
+        
+    }
+
+
+
+  .content {
+    flex-direction: column;
+    margin-left: 190px;
+    padding: 1em;
+    overflow: hidden;
+    
+  }
+
+ 
+
+  .footer {
+    padding: 55px 20px;
+    background-color: #2e3550;
+    color: white;
+    text-align: center;
+  }
