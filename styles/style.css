@@ -8,7 +8,9 @@ body {
 .container {
   line-height: 150%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: inline;
 }
 
 .topContainer {
@@ -44,10 +46,15 @@ body {
 }
 
 .content {
-  flex-direction: column;
-  margin-left: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1em;
   overflow: hidden;
+}
+.content .contentItems {
+  padding: 1em;
+  border: 1px solid black;
 }
 
 .footer {

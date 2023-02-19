@@ -2,6 +2,12 @@ $primaryColor:rgb(70, 70, 70);
 $hoverColor:rgb(84, 84, 84);
 $textColor:rgb(242, 242, 242);
 
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 body {
     margin: 0;
     box-sizing: border-box;
@@ -11,14 +17,12 @@ body {
 
   .container {
     line-height: 150%;
-    display: flex;
-    flex-direction: column;
+    @include flexCenter();
+    display: inline;
   }
 
   .topContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexCenter();
     min-width: 250px;
     width: 100%;
     margin: 0;
@@ -30,9 +34,7 @@ body {
             &:hover{
                 background-color:$hoverColor;
             }
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flexCenter();
             margin-left: 1em;
             margin-right: 1em;
             img{
@@ -53,10 +55,13 @@ body {
 
 
   .content {
-    flex-direction: column;
-    margin-left: 190px;
+    @include flexCenter();
     padding: 1em;
     overflow: hidden;
+    .contentItems{
+        padding: 1em;
+        border: 1px solid black;
+    }
     
   }
 
